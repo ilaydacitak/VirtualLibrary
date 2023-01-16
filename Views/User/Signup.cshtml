@@ -1,0 +1,107 @@
+﻿@model DenemeSWE.Models.User
+@{
+    ViewBag.Title = "Signup";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Join Us</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="~/web/assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/web/css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Join Us</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    @using (Html.BeginForm("Signup", "User", FormMethod.Post))
+                    {
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+                            @Html.AntiForgeryToken()
+
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                @Html.ValidationMessageFor(model => model.name)
+                                @Html.TextBoxFor(m => m.name, new { @class = "form-control", @id = "name", @placeholder = "Enter your name..." })
+                                <label for="name">First name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+
+                            <!-- Surname input-->
+                            <div class="form-floating mb-3">
+                                @Html.ValidationMessageFor(model => model.surname)
+                                @Html.TextBoxFor(m => m.surname, new { @class = "form-control", @id = "name", @placeholder = "Enter your surname..." })
+                                <label for="name">Surname name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                @Html.ValidationMessageFor(model => model.email)
+                                @Html.TextBoxFor(m => m.email, new { @class = "form-control", @id = "name", @placeholder = "name@example.com" })
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+
+                            <!-- Password input-->
+                            <div class="form-floating mb-3">
+                                @Html.ValidationMessageFor(model => model.password)
+                                @Html.TextBoxFor(m => m.password, new { @class = "form-control", @id = "name", @type = "password", @placeholder = "name@example.com" })
+                                <label for="name">Password</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A password is required.</div>
+                            </div>
+
+                            <button id="submitButton" style="color:#fff; background-color: #1abc9c;padding: 1rem 21.75rem; font-size: 1.25rem; box-sizing: border-box;" type="submit">
+                                Signup
+                            </button>
+
+                        </form>
+                    }
+                </div>
+                <div class="">
+
+                    @if (ViewData["SignupFlag"] != null)
+                    {
+                        <p class="text-head" style="color: red; background:lightpink; padding: 5px 10px; border: none; display: block; width: 57.7%; border-radius: 2px; margin-left:275px; text-align:center" >
+                            @ViewData["SignupFlag"]
+                        </p>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualLibrarySWE", "VirtualLibrarySWE.csproj", "{091445F4-CCEB-4296-99AB-FA93F468AB66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualLibrarySWETest", "..\VirtualLibrarySWETest\VirtualLibrarySWETest.csproj", "{78BABB5C-9ECE-48AC-8BA9-2F9CBD3C132E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{091445F4-CCEB-4296-99AB-FA93F468AB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{091445F4-CCEB-4296-99AB-FA93F468AB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{091445F4-CCEB-4296-99AB-FA93F468AB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{091445F4-CCEB-4296-99AB-FA93F468AB66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78BABB5C-9ECE-48AC-8BA9-2F9CBD3C132E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78BABB5C-9ECE-48AC-8BA9-2F9CBD3C132E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78BABB5C-9ECE-48AC-8BA9-2F9CBD3C132E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78BABB5C-9ECE-48AC-8BA9-2F9CBD3C132E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F095ACAF-164E-472A-ADBB-07EFEA7E5B87}
+	EndGlobalSection
+EndGlobal

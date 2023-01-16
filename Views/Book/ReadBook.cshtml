@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (!String.IsNullOrEmpty(ViewBag.Result))
+{
+    @Html.Raw(ViewBag.Result)
+}
+
+
+<script>
+    addEventListener("scroll", (event) => {
+        var x = document.documentElement.scrollTop || document.body.scrollTop;
+        if (x) {
+             $.post('/Book/SaveLocation', { userId: '@(Session["id"])', bookId: '@(ViewBag.BookId)', scrollPostion: x });
+        }
+
+    });
+</script>
+
+@if(ViewBag.ScrollPosition != null)
+            {
+                <script>
+                    addEventListener('DOMContentLoaded', (event) => {window.scrollTo(0, @ViewBag.ScrollPosition);});
+
+
+                </script>
+            }
+
